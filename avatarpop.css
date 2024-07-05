@@ -1,0 +1,21 @@
+body{
+    background-image: url('images/avatar_bg.jpg');
+}
+
+.glow-pink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Audiowide", sans-serif;
+    color: rgb(253, 201, 252);
+    animation: neon-glow 1s ease-in-out infinite alternate;
+    }
+
+@keyframes neon-glow {
+    0% {
+    text-shadow: 0 0 4px rgba(200, 17, 200, 0.849), 0 0 8px rgb(182, 10, 176), 0 0 16px rgba(239, 7, 220, 0.416);
+    }
+    100% {
+    text-shadow: 0 0 10px rgba(247, 6, 247, 0.434), 0 0 20px rgba(243, 12, 251, 0.571), 0 0 30px rgba(184, 64, 208, 0.555);
+    }
+}  

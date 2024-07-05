@@ -1,0 +1,44 @@
+body{
+    background-image: url('https://wallpapercave.com/wp/wp6577116.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.glow-pink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Audiowide", sans-serif;
+    color: rgb(253, 201, 252);
+    animation: neon-glow 1s ease-in-out infinite alternate;
+    }
+
+@keyframes neon-glow {
+    0% {
+    text-shadow: 0 0 4px rgba(200, 17, 200, 0.849), 0 0 8px rgb(182, 10, 176), 0 0 16px rgba(239, 7, 220, 0.416);
+    }
+    100% {
+    text-shadow: 0 0 10px rgba(247, 6, 247, 0.434), 0 0 20px rgba(243, 12, 251, 0.571), 0 0 30px rgba(184, 64, 208, 0.555);
+    }
+} 
+
+.image-left{
+    position: fixed;
+    width: 15rem;
+    bottom: 0em;
+    left: 2.5em;
+}
+
+.image-middle{
+    position: fixed;
+    width: 30rem;
+    left: 30%;
+}
+
+.image-right{
+    position: fixed;
+    width: 15rem;
+    bottom: 0em;
+    right: 2.5em;
+}

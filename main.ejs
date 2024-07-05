@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Galada&family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Galada&family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+    <form id="myForm" action="/points" method="POST">
+    <div class="container mt-3">
+        <div class="profile">
+            <% if(data.avatarURL != ''){ %>
+                    <button id="profile-page" class="no-style" name="submit" value="submit"> 
+                        <img class="profile-image" id="icon" alt="Profile" width="180" src= <%= data.avatarURL %> />
+                    </button>
+            <% } %>
+            
+            <div class="profile-content">
+                <div class="profile-content-streak">
+                    <span>Streaks : </span>
+                    <span id="streaksDisplay"><%= data.streaks %></span>
+                </div>
+                <div class="profile-content-points">
+                    <span>Points : </span>
+                    <span id="pointsDisplay"><%= data.points %></span>
+                </div>
+                <div class="profile-content-timer">
+                    <span>Time : </span>
+                    <span id="timerDisplay">10</span>
+                </div>
+            </div>
+        </div>
+        <div class="center-content">
+            <h1 class="glow-gray">SONG <span id="song">1</span></h1>
+            <img class="musical-note" alt="Music Note Icon" src="https://marketplace.canva.com/MACjfbZiMnQ/1/thumbnail_large/canva-music-note-icon-MACjfbZiMnQ.png"/>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <button type="button" class="btn glow-white mb-2 song-details-button">Button 1</button>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn glow-white mb-2 btn song-details-button">Button 2</button>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn glow-white mb-2 btn song-details-button">Button 3</button>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn glow-white mb-2 btn song-details-button">Button 4</button>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn glow-white mb-2 btn song-details-button">Button 5</button>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+  <br>
+  <p id="songDetails"></p>
+  <audio id="audioPlayer" controls>
+    Your browser does not support the audio element.
+  </audio>
+    
+    <div class="modal fade" id="leaderboardModal" tabindex="-1" role="dialog" aria-labelledby="leaderboardModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="leaderboardModalLabel">Leaderboard</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Total Points: <span id="leaderboardPoints">0.0</span></p>
+                    <input type="hidden" name="points" id="points" value="" />
+                    <p>Streaks: <span id="leaderboardStreaks">0</span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+    <script src="function/main.js"></script>
+</body>    
+</html>

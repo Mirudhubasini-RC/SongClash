@@ -1,0 +1,113 @@
+body{
+    margin-top: 10px;
+    background-image: url('../image/main-bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.profile{
+    position: absolute;
+    top: 2em;
+    left: 2.5em;
+    display: flex;
+    gap: 5px;
+}
+
+.profile-content{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: gray;
+}
+
+.profile-image{
+    border-radius: 50%;
+    border: 1px solid gray;
+    width: 5em;
+}
+
+.back{
+    position: absolute;
+    bottom: 2em;
+    left: 2.5em;
+    display: flex;
+    gap: 5px;
+}
+
+
+.center-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+}
+
+.glow-white{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-family: 'Caveat', cursive;   
+     color: rgb(255, 255, 255);
+    animation: neon-glow-white 1s ease-in-out infinite alternate;
+}
+
+.glow-gray{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Audiowide", sans-serif;
+    color: gray;
+    animation: neon-glow-white 1s ease-in-out infinite alternate;
+    }
+
+@keyframes neon-glow-white {
+    0% {
+    text-shadow: 0 0 4px rgba(213, 242, 255, 0.849), 0 0 8px rgb(195, 254, 255), 0 0 16px rgba(198, 239, 245, 0.416);
+    }
+    100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.434), 0 0 20px rgba(255, 253, 255, 0.571), 0 0 30px rgba(255, 254, 255, 0.555);
+    }
+} 
+
+.musical-note{
+    width: 20vw;
+    height: 40vh;
+}
+
+.option{
+    display: flex;
+    gap: 3vw;
+}
+
+.btn{
+    background-color: rgba(128, 128, 128, 0.509);
+}
+
+.btn:hover{
+    background-color: rgb(203, 76, 249);
+    animation: neon-glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow {
+    0% {
+    box-shadow: 0 0 4px rgba(248, 133, 248, 0.849), 0 0 8px rgb(242, 128, 238), 0 0 16px rgba(251, 119, 240, 0.416);
+    }
+    100% {
+    box-shadow: 0 0 10px rgba(247, 131, 247, 0.434), 0 0 20px rgba(236, 129, 240, 0.571), 0 0 30px rgba(227, 124, 247, 0.555);
+    }
+} 
+
+#audioPlayer {
+    display: none;
+}
+
+.no-style{
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}

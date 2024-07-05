@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Code</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="styles/generatecode.css">
+    <link rel="icon" type="image/x-icon" href="image/favicon.png">
+</head>
+<body>
+  <div class="container marketing my-5">
+    <h1 style="font-size: 3em; text-align: center;" class="pb-2 mt-3 border-bottom glow-pink">Hello, Host</h1><br>
+   <div class="justify-content-center align-items-center mt-3">
+        <div class="col-md-10 mx-auto col-lg-5">
+            <form action="http://localhost:5000/groupmain" method="POST" class="p-3 p-md-5 border rounded-3 form-bg">
+                <div class="form-floating mb-3 d-flex gap-3">
+                    <pre id="codeToCopy">
+                        <input type="text" class="form-control bg" id="generatedCode" placeholder="#######" disabled>
+                    </pre>
+                    
+                    <input type="hidden" name="username" id="username" value= <%= data.username %> />
+                    <input type="hidden" name="password" id="password" value= <%= data.password %> />
+                    <input type="hidden" name="points" id="points" value= <%= data.points %> />
+                    <input type="hidden" name="streaks" id="streaks" value= <%= data.streaks %> />
+                    <input type="hidden" name="url" id="url" value= <%= data.avatarURL %> />
+
+                    <button id="copyButton" class="no-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-clipboard-fill" viewBox="0 0 16 16">
+                         <path fill-rule="evenodd" d="M10 1.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1Zm-5 0A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5v1A1.5 1.5 0 0 1 9.5 4h-3A1.5 1.5 0 0 1 5 2.5v-1Zm-2 0h1v1A2.5 2.5 0 0 0 6.5 5h3A2.5 2.5 0 0 0 12 2.5v-1h1a2 2 0 0 1 2 2V14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3.5a2 2 0 0 1 2-2Z"/>
+                        </svg>
+                    </button>
+                </div>
+                <button name="submit" type="submit" value="off" id="playBtn" class="btn btn-outline-dark w-100 mb-3 btn-lg font glow-on-hover">Enter Room</button>
+            </form>
+        </div>
+    </div> 
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="function/generatecode.js"></script>
+</body>
+</html>

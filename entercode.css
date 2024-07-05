@@ -1,0 +1,59 @@
+body{
+    background-image: url("https://i.makeagif.com/media/8-06-2018/2yYoLB.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+	form{
+	background-color:rgba(0, 0, 0, 0.715);
+	align-items: center;
+	
+	}
+	.clr{
+		background-color: rgb(185, 37, 148);
+		font-family:serif;
+		font-weight:bolder;
+		color: antiquewhite;
+		align-items: center;
+	    display: flex;
+		justify-content: center;
+		
+	}
+
+	label{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: 'Galada', cursive;
+		font-family: 'Pixelify Sans', sans-serif;
+		color: rgb(255, 255, 255);
+		animation: neon-glow-letter 1s ease-in-out infinite alternate;
+		font-size:3rem;
+	}
+
+@keyframes neon-glow-letter {
+    0% {
+    text-shadow: 0 0 4px rgba(200, 17, 200, 0.849), 0 0 8px rgb(182, 10, 176), 0 0 16px rgba(239, 7, 220, 0.416);
+    }
+    100% {
+    text-shadow: 0 0 10px rgba(247, 6, 247, 0.434), 0 0 20px rgba(243, 12, 251, 0.571), 0 0 30px rgba(184, 64, 208, 0.555);
+    }
+}
+
+.btn{
+    background-color: rgba(128, 128, 128, 0.509);
+}
+
+.btn:hover{
+    background-color: rgb(203, 76, 249);
+    animation: neon-glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow {
+    0% {
+    box-shadow: 0 0 4px rgba(248, 133, 248, 0.849), 0 0 8px rgb(242, 128, 238), 0 0 16px rgba(251, 119, 240, 0.416);
+    }
+    100% {
+    box-shadow: 0 0 10px rgba(247, 131, 247, 0.434), 0 0 20px rgba(236, 129, 240, 0.571), 0 0 30px rgba(227, 124, 247, 0.555);
+    }
+} 

@@ -1,0 +1,35 @@
+body{
+    background-image: url('../image/points.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#pointsDisplay {
+    font-size: 5rem;
+    font-weight: bold;
+  }
+
+  .glow-white{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Galada', cursive;
+    /* font-family: 'Pixelify Sans', sans-serif; */
+    color: rgb(255, 255, 255);
+    animation: neon-glow-white 1s ease-in-out infinite alternate;
+    }
+
+@keyframes neon-glow-white {
+    0% {
+    text-shadow: 0 0 4px rgba(213, 242, 255, 0.849), 0 0 8px rgb(195, 254, 255), 0 0 16px rgba(198, 239, 245, 0.416);
+    }
+    100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.434), 0 0 20px rgba(255, 253, 255, 0.571), 0 0 30px rgba(255, 254, 255, 0.555);
+    }
+}   

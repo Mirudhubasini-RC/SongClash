@@ -1,0 +1,77 @@
+body{
+    background-image: url('../image/avatar_bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+a {
+    text-decoration: none; 
+  }
+
+bot{
+    width: 1000px;
+    height: 200px;
+}
+h2{
+    color: rgb(170, 16, 190);
+    font-family:Agbalumo;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.945),
+               0 0 20px rgba(228, 221, 228, 0.993),
+               0 0 30px rgba(225, 233, 234, 0.808);
+    text-align: center;  
+    font-size: 90px;        
+}
+
+.glow-pink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Audiowide", sans-serif;
+    color: rgb(253, 201, 252);
+    animation: neon-glow 1s ease-in-out infinite alternate;
+    font-size: 3em;
+    }
+
+@keyframes neon-glow {
+    0% {
+    text-shadow: 0 0 4px rgba(200, 17, 200, 0.849), 0 0 8px rgb(182, 10, 176), 0 0 16px rgba(239, 7, 220, 0.416);
+    }
+    100% {
+    text-shadow: 0 0 10px rgba(247, 6, 247, 0.434), 0 0 20px rgba(243, 12, 251, 0.571), 0 0 30px rgba(184, 64, 208, 0.555);
+    }
+}   
+
+ .font_card{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Galada', cursive;
+        font-family: 'Pixelify Sans', sans-serif;
+        color: rgb(255, 255, 255);
+        animation: neon-glow-white 1s ease-in-out infinite alternate;
+        font-size:30px;
+        }
+   
+    @keyframes neon-glow-white {
+        0% {
+        text-shadow: 0 0 4px rgba(213, 242, 255, 0.849), 0 0 8px rgb(195, 254, 255), 0 0 16px rgba(198, 239, 245, 0.416);
+        }
+        100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.434), 0 0 20px rgba(255, 253, 255, 0.571), 0 0 30px rgba(255, 254, 255, 0.555);
+        }
+    }
+   
+
+
+.clr{
+    color :aliceblue;
+    background-image: url('../image/option_bg.jpg');
+    border-radius: 1em;
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}

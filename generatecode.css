@@ -1,0 +1,67 @@
+body{
+    background-image: url("https://i.makeagif.com/media/8-06-2018/2yYoLB.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Galada', cursive;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: rgb(255, 255, 255);
+    animation: neon-glow-white 1s ease-in-out infinite alternate;
+    font-size:30px;
+}
+form{
+    background-image: url("../image/back.jpg");
+}
+.font{
+    font-family: 'Galada', cursive;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+}
+.font1{
+    font-family: 'Galada', cursive;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+.bg{
+    background-image: url("../image/back.jpg");
+    font-family: 'Galada', cursive;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+@keyframes neon-glow-white {
+    0% {
+    text-shadow: 0 0 4px rgba(213, 242, 255, 0.849), 0 0 8px rgb(195, 254, 255), 0 0 16px rgba(198, 239, 245, 0.416);
+    }
+    100% {
+    text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 20px rgba(255, 253, 255, 0.571), 0 0 30px rgba(255, 254, 255, 0.555);
+    }
+}
+
+.glow-on-hover:hover {
+    background-color: #d9aaff;
+    color: white; 
+    box-shadow: 0 0 10px #d9aaff; 
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+
+.no-button{
+    background-color: rgba(255, 255, 255, 0);
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+
+
+
+

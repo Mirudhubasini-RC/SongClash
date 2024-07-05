@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>User Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/profile.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="image/favicon.png">
+</head>
+<body>
+    <div class="container mt-5">
+        <form id="profileForm" action="/updateprofile" method="POST">
+            <div class="container p-5">
+                <div class="py-5 text-center">
+                    <a href="avatar.html">
+                        <img class="profile-image" width="180" height="180" src= <%= data.avatarURL %> alt="Profile Image">
+                    </a>
+                    <div class="username m-2">
+                        <div id="content" class="d-flex justify-content-center align-items-center">
+                            <span id="textContent"><%= data.username %></span>
+                        </div>
+                        
+                        <div id="icon" class="icon" onclick="convertToInput()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
+                                <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z"/>
+                            </svg>
+                        </div>
+                        <input type="hidden" id="username" name="username" value="hu" />
+                    </div>
+                    <div class="score">
+                        <span id="points">
+                            Total Score : <%= data.points  %>
+                        </span>
+                    </div>
+                    <span id="hiddenpassword" style="display: none;"><%= data.password %></span>
+
+                    <div class="button-container">
+                        <button class="save-btn glow-white center" type="button" onclick="togglePasswordChange()">Change Password</button>
+                        <button class="save-btn glow-white center"  id="submitButton" type="submit">Save Changes</button>
+                    </div>
+
+                    <div class="password-change" id="passwordChange" style="display: none;">
+                        <h2>Change Password</h2>
+                        <div class="form-group">
+                            <label for="oldPassword">Old Password</label>
+                            <input type="password" class="form-control" id="oldPassword" placeholder="Enter your old password">
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">New Password</label>
+                            <input type="password" class="form-control" id="newPassword" name="newPassword" placeholder="Enter your new password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm New Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your new password">
+                        </div>
+                        <div class="form-group">
+                            <button class="save-btn glow-white center" type="button" onclick="saveChanges()">OK</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="function/profile.js"></script>
+</body>
+</html>
